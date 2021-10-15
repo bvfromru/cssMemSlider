@@ -1,0 +1,80 @@
+body {
+  background-color: lightgrey;
+}
+
+header {
+  height: 100px;
+}
+
+.wrapper {
+  width: 50%;
+  background-color: grey;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+/* slider */
+
+.input-radio {
+  display: none;
+}
+
+.slider-img, .slider-text
+{
+    display: none;
+}
+
+.slider-img img {
+  width: 100%;
+  height: auto;
+}
+
+.slider-controls label
+{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+
+    cursor: pointer;
+    vertical-align: top;
+
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.slider-controls
+{
+    font-size: 0;
+    float: right;
+}
+
+.slider-controls label:hover
+{
+    background-color: rgba(248, 247, 244, .4);
+}
+
+
+#btn-1:checked ~ .slider-container #slide1,
+#btn-2:checked ~ .slider-container #slide2,
+#btn-3:checked ~ .slider-container #slide3,
+#btn-4:checked ~ .slider-container #slide4,
+#btn-5:checked ~ .slider-container #slide5
+{
+    display: block;
+}
+
+#btn-1:checked ~ .slider-container label[for='btn-1'],
+#btn-2:checked ~ .slider-container label[for='btn-2'],
+#btn-3:checked ~ .slider-container label[for='btn-3'],
+#btn-4:checked ~ .slider-container label[for='btn-4'],
+#btn-5:checked ~ .slider-container label[for='btn-5']
+{
+    background-color: #fff;
+}
+
