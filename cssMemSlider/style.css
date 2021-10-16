@@ -2,18 +2,23 @@ body {
   background-color: lightgrey;
 }
 
-header {
-  height: 100px;
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
 
 .wrapper {
   width: 50%;
-  /* background-color: grey; */
   margin-left: auto;
   margin-right: auto;
 }
 
-
+h1 {
+  text-align: center;
+}
 
 
 
@@ -23,18 +28,24 @@ header {
   display: none;
 }
 
-.slider-img, .slider-text {
-  display: none;
-}
-
 .slider-container {
   padding-bottom: 2vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-img-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
 }
 
 .slider-img {
-  position: relative;
-  margin-bottom: 4vh;
-  overflow: hidden;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  margin-bottom: 3vh;
 }
 
 .slider-img img {
@@ -44,51 +55,85 @@ header {
   transition-duration: 2s;
 }
 
+.slider-text-wrapper {
+  overflow: hidden;
+}
+
+.slider-text-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+
+
 .slider-text {
   font-size: 30px;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  pointer-events: none;
 }
 
 .slider-controls label {
   display: inline-block;
+  padding: 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.slider-controls label:after {
+  display: block;
+  content: "";
   width: 17px;
   height: 17px;
-  margin-right: 8px;
-
-  cursor: pointer;
-  vertical-align: top;
-
   border: 2px solid #fff;
   border-radius: 50%;
   background-color: transparent;
 }
+
 
 .slider-controls {
   font-size: 0;
   float: right;
 }
 
-.slider-controls label:hover {
+.slider-controls label:after:hover {
   background-color: rgba(248, 247, 244, .4);
 }
 
-.slider-controls label:active {
+.slider-controls label:after:active {
   background-color: rgba(148, 147, 144, .4);
 }
 
 
-#btn-1:checked ~ .slider-container #slide1,
+#btn-1:checked ~ .slider-container .slider-img-container { left: 0;}
+#btn-2:checked ~ .slider-container .slider-img-container { left: -100%;}
+#btn-3:checked ~ .slider-container .slider-img-container { left: -200%;}
+#btn-4:checked ~ .slider-container .slider-img-container { left: -300%;}
+#btn-5:checked ~ .slider-container .slider-img-container { left: -400%;}
+
+#btn-1:checked ~ .slider-container .slider-text-container { left: 0;}
+#btn-2:checked ~ .slider-container .slider-text-container { left: -100%;}
+#btn-3:checked ~ .slider-container .slider-text-container { left: -200%;}
+#btn-4:checked ~ .slider-container .slider-text-container { left: -300%;}
+#btn-5:checked ~ .slider-container .slider-text-container { left: -400%;}
+
+
+/* #btn-1:checked ~ .slider-container #slide2,
 #btn-2:checked ~ .slider-container #slide2,
 #btn-3:checked ~ .slider-container #slide3,
 #btn-4:checked ~ .slider-container #slide4,
 #btn-5:checked ~ .slider-container #slide5 {
   display: block;
-}
+} */
 
-#btn-1:checked ~ .slider-container label[for='btn-1'],
-#btn-2:checked ~ .slider-container label[for='btn-2'],
-#btn-3:checked ~ .slider-container label[for='btn-3'],
-#btn-4:checked ~ .slider-container label[for='btn-4'],
-#btn-5:checked ~ .slider-container label[for='btn-5'] {
+#btn-1:checked ~ .slider-container label[for='btn-1']::after,
+#btn-2:checked ~ .slider-container label[for='btn-2']::after,
+#btn-3:checked ~ .slider-container label[for='btn-3']::after,
+#btn-4:checked ~ .slider-container label[for='btn-4']::after,
+#btn-5:checked ~ .slider-container label[for='btn-5']::after {
   background-color: #fff;
 }
 
