@@ -32,6 +32,15 @@ h1 {
   padding-bottom: 2vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* align-items: center; */
+}
+
+.slider-container-element {
+  flex: 1 0 50%;
+  text-align: center;
 }
 
 .slider-img-container {
@@ -40,6 +49,7 @@ h1 {
   position: relative;
   left: 0;
   transition: left 0.3s ease-in-out;
+  flex: 0 1 100%;
 }
 
 .slider-img {
@@ -65,20 +75,28 @@ h1 {
   position: relative;
   left: 0;
   transition: left 0.3s ease-in-out;
+  text-align: left;
 }
 
 
 .slider-text {
-  font-size: 30px;
+  font-size: 26px;
   flex-basis: 100%;
   flex-shrink: 0;
   pointer-events: none;
 }
 
+
+.slider-controls {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+
 .slider-controls label {
   display: inline-block;
-  padding: 10px;
-  margin-right: 8px;
+  padding: 4%;
   cursor: pointer;
   vertical-align: middle;
 }
@@ -94,16 +112,11 @@ h1 {
 }
 
 
-.slider-controls {
-  font-size: 0;
-  float: right;
-}
-
-.slider-controls label:after:hover {
+.slider-controls label:hover::after {
   background-color: rgba(248, 247, 244, .4);
 }
 
-.slider-controls label:after:active {
+.slider-controls label:active::after {
   background-color: rgba(148, 147, 144, .4);
 }
 
@@ -120,15 +133,6 @@ h1 {
 #btn-4:checked ~ .slider-container .slider-text-container { left: -300%;}
 #btn-5:checked ~ .slider-container .slider-text-container { left: -400%;}
 
-
-/* #btn-1:checked ~ .slider-container #slide2,
-#btn-2:checked ~ .slider-container #slide2,
-#btn-3:checked ~ .slider-container #slide3,
-#btn-4:checked ~ .slider-container #slide4,
-#btn-5:checked ~ .slider-container #slide5 {
-  display: block;
-} */
-
 #btn-1:checked ~ .slider-container label[for='btn-1']::after,
 #btn-2:checked ~ .slider-container label[for='btn-2']::after,
 #btn-3:checked ~ .slider-container label[for='btn-3']::after,
@@ -137,3 +141,37 @@ h1 {
   background-color: #fff;
 }
 
+@media (max-width: 900px) {
+
+
+  .slider-container-element {
+    flex: 0 1 100%;
+  }
+
+  .slider-controls {
+    justify-content: center;
+    margin-bottom: 1vh;
+  }
+
+  .slider-controls label:after {
+    width: 10px;
+    height: 10px;
+  }
+
+  .slider-text {
+    font-size: 20px;
+  }
+
+  .slider-text-wrapper {
+    order: 1;
+    margin-bottom: 2vh;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+}
+  
