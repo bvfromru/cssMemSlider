@@ -1,3 +1,7 @@
+:root {
+  font-size: 20px;
+}
+
 body {
   background-color: rgb(206, 210, 219);
   font-family: cursive;
@@ -12,6 +16,7 @@ body {
 
 footer {
   margin-top: 5vh;
+  font-size: 1em;
 }
 
 .wrapper {
@@ -84,7 +89,7 @@ h1 {
 
 
 .slider-text {
-  font-size: 1.6em;
+  font-size: 1.4em;
   flex-basis: 100%;
   flex-shrink: 0;
   pointer-events: none;
@@ -106,9 +111,9 @@ h1 {
 .slider-controls label:after {
   display: block;
   content: "";
-  width: 17px;
-  height: 17px;
-  border: 2px solid #fff;
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid #fff;
   border-radius: 50%;
   background-color: transparent;
   transition: background-color 0.2s ease-in-out;
@@ -154,6 +159,7 @@ h1 {
 
 
 @media (max-width: 1000px) {
+
 
 
   .slider-container-element {
