@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cssMemSlider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <h1>CSS Mem Slider</h1>
+    </div>
+  </header>
+  <main>
+    <div class="wrapper">
+      <section class="slider">
+        <input class=input-radio type="radio" id="btn-1" name="toggle" checked>
+        <input class=input-radio type="radio" id="btn-2" name="toggle">
+        <input class=input-radio type="radio" id="btn-3" name="toggle">
+        <input class=input-radio type="radio" id="btn-4" name="toggle">
+        <input class=input-radio type="radio" id="btn-5" name="toggle">
+
+        <div class="slider-container">
+
+          <div class="slider-img-container slider-container-element">
+            <div class="slider-img" id="slide1">
+              <img src="./memes/1.jpg" alt="Mem 1">
+            </div>
+            <div class="slider-img" id="slide2">
+              <img src="./memes/2.jpg" alt="Mem 2">
+            </div>
+            <div class="slider-img" id="slide3">
+              <img src="./memes/3.png" alt="Mem 3">
+            </div>
+            <div class="slider-img" id="slide4">
+              <img src="./memes/4.jpg" alt="Mem 4">
+            </div>
+            <div class="slider-img" id="slide5">
+              <img src="./memes/5.jpg" alt="Mem 5">
+            </div>
+          </div>
+
+          <div class="slider-text-wrapper slider-container-element">
+            <div class="slider-text-container">
+              <div class="slider-text" id="slide1">
+                <span>О музыке</span>
+              </div>
+              <div class="slider-text" id="slide2">
+                <span>О программировании</span>
+              </div>
+              <div class="slider-text" id="slide3">
+                <span>О метро</span>
+              </div>
+              <div class="slider-text" id="slide4">
+                <span>Поэтому без JS!</span>
+              </div>
+              <div class="slider-text" id="slide5">
+                <span>Об этом задании ;)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-controls slider-container-element">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+            <label for="btn-3"></label>
+            <label for="btn-4"></label>
+            <label for="btn-5"></label>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="wrapper">
+      <div class="footer-content">
+        <span>© 2021</span>
+        <a class="rs-link" href="https://rs.school/js/" target="_blank">The Rolling Scopes School</a>
+        <a href="https://github.com/bvfromru" target="_blank">Bvfromru</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
